@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The official website of The Bow Council clan.">
+        <meta name="theme-color" content="#000000">
+        <!-- Three.js dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>The Bow Council [BC]</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    </head>
+    <body>
+        <section>
+            <canvas id="scene"></canvas>
+            <br /><br /><br /><br /><br /><br />
+            <h1 id="clan-name">The Bow Council  [BC]</h1>
+            <div class="logo-wrapper">
+                <img id="logo" src="assets/logo.png" alt="The Bow Council logo">
+            </div>
+            <br />
+            <p>Welcome to the official website of The Bow Council [BC], a clan built<br /> on merit, dedication, and skill.</p>
+            <button id="go-down" aria-label="Go down" onclick="document.getElementById('content').scrollIntoView({ behavior: 'smooth' });"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="6 9 12 15 18 9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <br /><br /><br /><br /><br />
+        </section>
+        <main id="content">
+            <section id="joining-process">
+                <br /><br /><br /><br /><br />
+                <a href="https://discord.gg/FDvavTvAK" target="_blank"><h1>Joining The Clan</h1></a>
+                <p>Joining is simple: ask to join, introduce yourself, and become part of the clan.<br /> Members with talents beyond Narrow One may also earn special artist roles<br /> for skills such as coding, music, writing, 3D modeling, and more.</p>
+                <br />
+            </section>
+            <section id="roles">
+                <br /><br /><br /><br /><br />
+                <h1>Roles</h1>
+                <p>Roles describe each clan member’s responsibilities. They are separate from ranks,<br /> which represent a player’s level of skill and experience.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Role</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img id="role-icon1" class="role-icon" src="assets/peasant.png" alt="Peasant"><h3>Peasant</h3></td>
+                            <td>A peasant is a new member who recently joined and has not yet passed the test to become a monk. They cannot train others or lead a practice team.</td>
+                        </tr>
+                        <tr>
+                            <td><img class="role-icon" src="assets/monk.png" alt="Monk"><h3>Monk</h3></td>
+                            <td>A monk is a member who has passed the required tests. They can help other members and participate in clan wars.</td>
+                        </tr>
+                        <tr>
+                            <td><img class="role-icon" src="assets/knight.png" alt="Knight"><h3>Knight</h3></td>
+                            <td>A knight can help others, participate in clan wars, train peasants when no king or fearless warrior is available, and co-lead practice sessions.</td>
+                        </tr>
+                        <tr>
+                            <td><img class="role-icon" src="assets/king.png" alt="King"><h3>King</h3></td>
+                            <td>A king can participate in clan wars, organize activities for other members, lead a practice team, and train others.</td>
+                        </tr>
+                        <tr>
+                            <td><img class="role-icon" src="assets/fearless.png" alt="Fearless Warrior"><h3>Fearless Warrior</h3></td>
+                            <td>A fearless warrior can do everything a king can do and is also part of the clan congress. They help choose upcoming wars, select higher-rank quests, and manage the clan.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="ranks">
+                <br /><br /><br /><br /><br />
+                <h1>Ranks</h1>
+                <p>Ranks represent a player’s level of skill and experience within the clan.</p>
+                <table>
+                    <thead>
+                        <tr><th scope="col">Rank</th><th scope="col">Description</th></tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Apprentice</td>
+                        <td>The lowest rank in the clan, usually held by new members who are still learning the game.</td>
+                    </tr>
+                    <tr>
+                        <td>Archer</td>
+                        <td>A rank for members who have demonstrated growing skill and experience in the game.</td>
+                    </tr>
+                    <tr>
+                        <td>Marksman</td>
+                        <td>A rank for members who have demonstrated a high level of skill and experience in the game.</td>
+                    </tr>
+                    <tr>
+                        <td>Sharpshooter</td>
+                        <td>A rank for members who have demonstrated exceptional skill and extensive experience in the game.</td>
+                    </tr>
+                    <tr>
+                        <td>Elite</td>
+                        <td>The highest rank in the clan, usually held by its most skilled and experienced members.</td>
+                    </tr>
+                </tbody>
+                </table>
+            </section>
+            <section id="practice-teams">
+                <br /><br /><br /><br /><br />
+                <h1>Practice Teams</h1>
+                <p>Practice teams are groups of members who train together at a similar level based on their ranks.<br /> They may practice once a week or once a month. For newer members, joining a practice team is not mandatory<br /> but is strongly encouraged. Members at the Elite rank practice directly with M8M6.</p>
+                <br /><br /><br /><br /><br />
+            </section>
+        </main>
+            <section id="footer">
+                <br /><br /><br />
+                <p>© 2026 The Bow Council [BC]. All rights reserved.</p>
+                <br /><br /><br />
+            </section>
+        <script src="script.js" defer></script>
+    </body>
+</html>

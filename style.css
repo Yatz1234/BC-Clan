@@ -1,0 +1,124 @@
+:root {
+  --gradient-bg: linear-gradient(270deg, #0d2a36, #ba8f03, #222244);
+  --gradient-size: 600% 600%;
+  --color-white: rgb(255, 255, 255);
+  --text-glow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+
+  /* Tailles responsives : s'adaptent entre mobile et desktop sans changer le rendu desktop */
+  --logo-size: clamp(180px, 40vw, 500px);
+  --role-icon-size: clamp(120px, 25vw, 300px);
+  --clan-name-size: clamp(28px, 6vw, 60px);
+}
+
+@font-face {
+  font-family: 'BlueNight';
+  src: url('assets/BlueNight-Regular.ttf') format('truetype');
+  font-display: swap; /* évite le blocage du rendu texte pendant le chargement de la police */
+}
+
+body {
+  font-family: 'BlueNight', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: var(--gradient-bg);
+  background-size: var(--gradient-size);
+  z-index: 1;
+}
+
+table, th, td {
+  border: 1px solid var(--color-white);
+  border-collapse: collapse;
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.role-icon,
+#logo {
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.role-icon:hover,
+#logo:hover {
+  transform: scale(1.1);
+}
+
+.role-icon {
+  width: var(--role-icon-size);
+  height: var(--role-icon-size);
+}
+
+#logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  animation: floatIcon 2s ease-in-out infinite;
+  will-change: transform; /* optimise l'animation continue (float + hover) */
+}
+
+canvas#scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: var(--gradient-bg);
+  background-size: var(--gradient-size);
+}
+
+#content {
+  position: relative;
+  z-index: 1;
+  background-color: rgb(0, 0, 22);
+  top: 0;
+}
+
+h1 {
+  background: linear-gradient(to right, #ffc400, #1b0e8b 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+}
+
+#clan-name {
+  font-size: var(--clan-name-size);
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-18px); }
+}
+
+/* Ajustements fins pour très petits écrans (tables notamment) */
+@media (max-width: 600px) {
+  table, th, td {
+    width: 90%;
+    padding: 6px;
+  }
+}
+
+ tr:hover {
+  background-color: hsla(0, 0%, 100%, 0.171);
+} 
+#go-down {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#go-down:hover {
+  transform: translateY(5px);
+}
+#joining-process h1 {
+  text-decoration: underline;
+  text-decoration-color: #f3f2f0;
+}
